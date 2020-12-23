@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.sjis) (TeX Live 2016/W32TeX) (preloaded format=platex 2017.5.20)  12 DEC 2019 13:27
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.sjis) (TeX Live 2016/W32TeX) (preloaded format=platex 2016.9.25)  24 DEC 2020 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/waverider/mthesis-style/Mtex/mthesis.tex
-(c:/Users/waverider/mthesis-style/Mtex/mthesis.tex
-pLaTeX2e <2016/11/29> (based on LaTeX2e <2017/01/01> patch level 3)
+**c:/Users/ZETA/zeta-mthesis/Mtex/mthesis.tex
+(c:/Users/ZETA/zeta-mthesis/Mtex/mthesis.tex
+pLaTeX2e <2016/09/08> (based on LaTeX2e <2016/03/31> patch level 3)
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -27,13 +27,13 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
  (c:/texlive/2016/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
  (c:/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -245,8 +245,6 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
-   defining Unicode char U+0232 (decimal 562)
-   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -267,13 +265,11 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
-   defining Unicode char U+1E20 (decimal 7712)
-   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
  (c:/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -313,7 +309,7 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
  (c:/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -353,7 +349,7 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 ) (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -368,59 +364,59 @@ File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ) (./mthesis.aux)
 \openout1 = `mthesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 332.
-LaTeX Font Info:    ... okay on input line 332.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 307.
+LaTeX Font Info:    ... okay on input line 307.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 336.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 336.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 336.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 336.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
  [1
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 337.
+(Font)              <12> on input line 312.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 337.
+(Font)              <8> on input line 312.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 312.
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 338.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 313.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 313.
  (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 338.
+(Font)              <7> on input line 313.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 338.
+(Font)              <5> on input line 313.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 313.
 
-Underfull \hbox (badness 1033) in paragraph at lines 338--338
+Underfull \hbox (badness 1033) in paragraph at lines 313--313
 [][]\OT1/cmr/m/n/10 Master's The-sis, Di-vi-sion of In-for-ma-tion Sci-ence, Grad-u-ate School of Sci-ence and
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 338.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 313.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 338.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 313.
 [1] [2] (./mthesis.toc)
 \tf@toc=\write3
 \openout3 = `mthesis.toc'.
@@ -435,9 +431,9 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 
  [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 368.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 343.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 368.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 343.
  [1] [2] [3] [4] [5] [6] [7] (./mthesis.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
@@ -453,12 +449,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 1053 strings out of 493683
- 11370 string characters out of 6152642
- 73603 words of memory out of 5000000
- 4636 multiletter control sequences out of 15000+600000
+ 1049 strings out of 493682
+ 11330 string characters out of 6152630
+ 73695 words of memory out of 5000000
+ 4633 multiletter control sequences out of 15000+600000
  14579 words of font info for 56 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 26i,8n,20p,238b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,8n,20p,232b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mthesis.dvi (15 pages, 28000 bytes).
+Output written on mthesis.dvi (15 pages, 27984 bytes).
