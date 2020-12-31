@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.sjis) (TeX Live 2016/W32TeX) (preloaded format=platex 2017.5.20)  31 DEC 2020 22:49
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.sjis) (TeX Live 2016/W32TeX) (preloaded format=platex 2017.5.20)  31 DEC 2020 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -339,8 +339,8 @@ Now handling font encoding JT1 ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (./naist-mthesis.sty
-Master's Thesis / Master's Report Style for Division of Information Science, Graduate School of Science and Technology, NAIST
+)) (./naist-jmthesis.sty
+Master's Thesis / Master's Report Style for Division of Information Science, Science and Technology, NAIST
 (./naist-mcommon.sty
 \nendo=\count90
 \curmin=\count91
@@ -365,7 +365,8 @@ File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
-) (./0_abstract.tex) (./mthesis.aux)
+) (./0_abstract.tex)
+No file mthesis.aux.
 \openout1 = `mthesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 290.
@@ -388,7 +389,7 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 294.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 294.
- [1
+[1
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -397,68 +398,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 295.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 295.
- [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 296.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 296.
- (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 296.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 296.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
+ 
 
-Underfull \hbox (badness 1033) in paragraph at lines 296--296
-[][]\OT1/cmr/m/n/10 Master's The-sis, Di-vi-sion of In-for-ma-tion Sci-ence, Grad-u-ate School of Sci-ence and
- []
+! Package inputenc Error: Unicode char é¬®™ (U+3A2ED9)
+(inputenc)                not set up for use with LaTeX.
 
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 296.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 296.
-[1] [2] (./mthesis.toc)
-\tf@toc=\write3
-\openout3 = `mthesis.toc'.
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.295 \cmemberspage
+                   
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.295 \cmemberspage
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
- [3] (./mthesis.lof)
-\tf@lof=\write4
-\openout4 = `mthesis.lof'.
-
- (./mthesis.lot)
-\tf@lot=\write5
-\openout5 = `mthesis.lot'.
-
- [4] (./1_introduction.tex
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 17.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 17.
- [1] [2] [3] [4] [5]) [6] (./7_conclusion_and_futurework.tex) [7] (./8_acknowledgements.tex) [8] (./mthesis.bbl
-
-LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 6.
-
-
-LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 6.
-
-) [9] [10] (./mthesis.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 1065 strings out of 493683
- 11614 string characters out of 6152642
- 73762 words of memory out of 5000000
- 4636 multiletter control sequences out of 15000+600000
- 14579 words of font info for 56 fonts, out of 8000000 for 9000
+ 994 strings out of 493683
+ 10772 string characters out of 6152642
+ 71430 words of memory out of 5000000
+ 4593 multiletter control sequences out of 15000+600000
+ 11779 words of font info for 46 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 26i,8n,20p,719b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on mthesis.dvi (16 pages, 29168 bytes).
+ 25i,8n,19p,237b,180s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on mthesis.dvi (1 page, 708 bytes).
