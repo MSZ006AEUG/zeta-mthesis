@@ -1,9 +1,9 @@
-This is e-upTeX, Version 3.14159265-p3.7-u1.21-160201-2.6 (utf8.uptex) (TeX Live 2016/W32TeX) (preloaded format=uplatex 2016.9.25)  3 JAN 2021 16:18
+This is e-upTeX, Version 3.14159265-p3.7-u1.21-160201-2.6 (utf8.uptex) (TeX Live 2016/W32TeX) (preloaded format=uplatex 2016.9.25)  3 JAN 2021 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/ZETA/zeta-mthesis/Mtex/mthesis.tex
-(c:/Users/ZETA/zeta-mthesis/Mtex/mthesis.tex
+**./Mtex/mthesis.tex
+(./Mtex/mthesis.tex
 pLaTeX2e <2016/09/08u01> (based on LaTeX2e <2016/03/31> patch level 3)
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -26,17 +26,20 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen118
-) (c:/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+)
+(c:/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
- (c:/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
- (c:/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -272,7 +275,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
- (c:/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -312,7 +316,8 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
- (c:/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -339,154 +344,25 @@ Now handling font encoding JT2 ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (./naist-jmthesis.sty
-Master's Thesis / Master's Report Style for Division of Information Science, Science and Technology, NAIST
-(./naist-mcommon.sty
-\nendo=\count90
-\curmin=\count91
-\hour=\count92
-\onehour=\count93
-\curhour=\count94
-)) (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: dvips.def on input line 99.
- (c:/texlive/2016/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen119
-\Gin@req@width=\dimen120
-) (./0_abstract.tex) (./mthesis.aux)
-\openout1 = `mthesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 290.
-LaTeX Font Info:    ... okay on input line 290.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 294.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 294.
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 294.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 294.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 294.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 294.
- [1
+! LaTeX Error: File `naist-jmthesis.sty' not found.
 
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 295.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 295.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 295.
- [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 296.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 296.
- (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 296.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 296.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 296.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 296.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 296.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 296.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 296.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 296.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 296.
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 296.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 296.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 296.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 296.
- [1]
-Underfull \hbox (badness 1033) in paragraph at lines 297--297
-[][]\OT1/cmr/m/n/10 Master's The-sis, Di-vi-sion of In-for-ma-tion Sci-ence, Grad-u-ate School of Sci-ence and
- []
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-[2] (./mthesis.toc)
-\tf@toc=\write3
-\openout3 = `mthesis.toc'.
+Enter file name: x
 
- [3] (./mthesis.lof)
-\tf@lof=\write4
-\openout4 = `mthesis.lof'.
-
- (./mthesis.lot)
-\tf@lot=\write5
-\openout5 = `mthesis.lot'.
-
- [4] (./1_introduction.tex
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 21.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 21.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 21.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 21.
- [1] [2] [3] [4] [5]) [6] (./2_relatedwork.tex) [1] (./3_design.tex) [1] (./4_implementation.tex) [1] (./5_anlytics.tex) (./6_conclusion_and_futurework.tex) [2] (./7_acknowledgements.tex) [3] (./mthesis.bbl
-
-LaTeX Font Warning: Font shape `JT2/gt/m/it' undefined
-(Font)              using `JT2/gt/m/n' instead on input line 6.
-
-
-LaTeX Font Warning: Font shape `JY2/gt/m/it' undefined
-(Font)              using `JY2/gt/m/n' instead on input line 6.
-
-) [4] [5] (./mthesis.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
- ) 
+ )
+(\end occurred when \ifx on line 15 was incomplete)
+(\end occurred when \ifx on line 15 was incomplete) 
 Here is how much of TeX's memory you used:
- 1073 strings out of 493678
- 11774 string characters out of 6152731
- 73426 words of memory out of 5000000
- 4639 multiletter control sequences out of 15000+600000
- 12275 words of font info for 56 fonts, out of 8000000 for 9000
+ 503 strings out of 493678
+ 4512 string characters out of 6152731
+ 61085 words of memory out of 5000000
+ 4148 multiletter control sequences out of 15000+600000
+ 6273 words of font info for 32 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 26i,8n,20p,1031b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,1n,19p,152b,44s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mthesis.dvi (19 pages, 32500 bytes).
+No pages of output.
