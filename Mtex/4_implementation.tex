@@ -2,11 +2,20 @@
 \pagenumbering{arabic}
 
 \subsection{実装上の課題}
-a
+通常ユーザーコンピュータはNAT/FWの背後にあるため、直接通信ができない
+1.クラウドから遊休コンピュータへ直接命令を送れない
+2.遊休コンピュータ・プレイヤーPC間で双方向的な直接通信ができない
+
 \subsection{GamingAnywhere}
-a
-\subsection{gRPC}
-a
+クラウドゲームサーバとクラウドゲームクライアントとしてGamingAnywhereを使用する
+
+\subsection{gRPC Response Streaming}
+Googleが開発しているオープンソースのRPC．異なるコンピュータで動作するサービス間で情報をやりとりするのに使われる。単一のリクエストに対して複数のレスポンスを返すことができるので、VCホストの完了報告などを受け取れる。
 
 \subsection{EdgeVPN}
-a
+P2P型のオーバーレイネットワークツール。ネットワークのユーザ/グループ管理が可能。TinCanの論文引用して紹介する。
+
+VMでEdgeVPNのパフォーマンス測った話もこの辺に入れる？
+
+\subsection{システム動作}
+Ubuntu20.04のマシンを2台用意して実験環境を作る。
