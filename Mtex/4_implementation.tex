@@ -6,13 +6,17 @@
 1.クラウドから遊休コンピュータへ直接命令を送れない
 2.遊休コンピュータ・プレイヤーPC間で双方向的な直接通信ができない
 
-\subsection{GamingAnywhere}
-クラウドゲームサーバとクラウドゲームクライアントとしてGamingAnywhereを使用する
 
-\subsection{gRPC Response Streaming}
+\subsection{VCコントローラとエージェントの連携}
+gRPC Response Streaming
 Googleが開発しているオープンソースのRPC．異なるコンピュータで動作するサービス間で情報をやりとりするのに使われる。単一のリクエストに対して複数のレスポンスを返すことができるので、VCホストの完了報告などを受け取れる。
 
-\subsection{EdgeVPN}
+\subsection{クラウドゲームサーバ・クライアント間のP2P通信}
+
+GamingAnywhere
+クラウドゲームサーバとクラウドゲームクライアントとしてGamingAnywhereを使用する
+
+EdgeVPN
 P2P型のオーバーレイネットワークツール。ネットワークのユーザ/グループ管理が可能。TinCanの論文引用して紹介する。
 
 VMでEdgeVPNのパフォーマンス測った話もこの辺に入れる？
