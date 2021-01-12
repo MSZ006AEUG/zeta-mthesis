@@ -4,7 +4,6 @@
 \subsection{提案システムの概要}
 プレイヤーのPCから最も近い利用可能な遊休コンピュータを探し、クラウドゲームサーバをホストさせるシステム
 
-(図)
 プレイヤーPC上のVCクライアントエージェントがクラウド上のVCコントローラにゲームプレイをリクエスト。VCコントローラが遊休コンピュータにVCホストエージェントにクラウドゲームのホスティングをリクエスト。遊休コンピュータでクラウドゲームサーバとゲームが起動し、プレイヤーPC上のクラウドゲームクライアントと通信してゲームをする。
 
 \subsection{VCコントローラ}
@@ -14,3 +13,10 @@
 \subsection{VCホストエージェント}
 
 \subsection{クラウドゲームサーバ/クライアント}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/architecture.pdf}
+    \caption{アーキテクチャ}
+    \label{fig:arch}
+\end{figure*}
