@@ -6,7 +6,6 @@
 
 評価を行う環境を図\ref{fig:expenv}のように構築した。ボランティアクラウドゲーミングコントローラは用意せず、クラウドサーバのroma上にはEdgeVPNのリンクを確立するために必要なXMPPサーバのみを用意した。プレイヤーPCの役割を果たすsiciliaではgRPCクライアントとGamingAnywhereクライアントが動作する。また、遊休コンピュータの役割を果たすfirenzeではgRPCサーバ、GamingAnywhereサーバおよびゲームが動作する。siciliaとfirenzeはそれぞれUbuntu20.04で動作するマシンを用い、1Gbpsのリンクを持つネットワークで接続した。このリンクに遅延挿入や帯域制限をかけることで様々なネットワーク環境での評価を実現する。
 
-
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/experimentalenvironment.eps}
@@ -17,24 +16,9 @@
 \subsection{クラウドゲームサーバ/クライアント間の通信性能}
 
 \subsubsection{リンクに対する生の遅延の大小の影響}
-tcを使って任意に遅延を挿入し、pingの値で遅延の増え方に影響がないか見る。
-遅延が増えたときの遅延の増え方が線形みたいなことを言う。
-遅延が増えたときの帯域の減り方の話をする。
+siciliaとfirenzeの間のネットワーク遅延の大小によって、GamingAnywhereサーバ/クライアント間のリンクを張るために使用しているEdgeVPNのオーバーヘッドがリンクの遅延に与える影響について調査した。tc\cite{iproute2}を用いてリンクに0-60msの遅延を挿入し、EdgeVPNを経由する場合としない場合の遅延増加の様子ping\cite{ping}を用いて計測した。計測遅延と挿入遅延の値の差をプロットしたものが図\ref{fig:ratency}である。計測値にはpingを10回実行した際の値の平均値を使用している。
 
-\subsubsection{リンクに対する遅延の大小の帯域への影響}
-tcを使って任意に遅延を挿入し、iperfで帯域の減り方への影響を見る
-遅延が増えたときの帯域の減り方の話をする。
-
-\subsection{ゲームプレイ時のフレームレート}
-
-\subsubsection{ネットワーク帯域の大小の影響}
-tcを使って帯域に制限をかけて、実際に複数のゲームをプレイしたときのフレームレートへの影響を見る。
-使用したゲームはSteamで公開されているAlbion Online(MMORPG)、Red Eclipse 2(FPS, Action)、Simply Chess(Board Game)
-
-\subsection{考察}
-どれぐらい数値が良ければ既存に勝てるのかみたいなこと
-
-
+EdgeVPNを経由しない通信に比べて、経由する場合は平均して1ms程度遅延のオーバヘッドが存在することがわかる。また、遅延のオーバーヘッドは挿入遅延の大きさに関わらずほぼ一定であるといえる。
 
 \begin{figure*}[t]
     \centering
@@ -42,6 +26,11 @@ tcを使って帯域に制限をかけて、実際に複数のゲームをプレ
     \caption{EdgeVPNリンクに対する遅延挿入の影響}
     \label{fig:ratency}
 \end{figure*}
+
+\subsubsection{リンクに対する遅延の大小のスループットへの影響}
+siciliaとfirenzeの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを経由する場合としない場合の帯域減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。EdgeVPNを経由する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、経由しない通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
+
+EdgeVPNを経由する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。(これは許容量であるみたいなことを関連研究のとこ書いてから書く)
 
 \begin{figure*}[t]
     \centering
@@ -56,6 +45,12 @@ tcを使って帯域に制限をかけて、実際に複数のゲームをプレ
     \caption{EdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
     \label{fig:band_without_edge}
 \end{figure*}
+
+\subsection{ゲームプレイ時のフレームレート}
+
+\subsubsection{ネットワーク帯域の大小の影響}
+tcを使って帯域に制限をかけて、実際に複数のゲームをプレイしたときのフレームレートへの影響を見る。
+使用したゲームはSteamで公開されているAlbion Online(MMORPG)、Red Eclipse 2(FPS, Action)、Simply Chess(Board Game)
 
 \begin{figure*}[t]
     \centering
@@ -77,3 +72,9 @@ tcを使って帯域に制限をかけて、実際に複数のゲームをプレ
     \caption{帯域制限下でのゲームプレイ時のフレームレートの変化 (Simply Chess (ボードゲーム)プレイ時)}
     \label{fig:fps_board}
 \end{figure*}
+
+\subsection{考察}
+どれぐらい数値が良ければ既存に勝てるのかみたいなこと
+
+
+
