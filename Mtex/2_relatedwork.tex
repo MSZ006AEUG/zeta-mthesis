@@ -1,9 +1,15 @@
 \section{背景}
+本章では、研究の背景および既存の研究について述べる。
 
 \subsection{クラウドゲーミング}
+クラウドゲーミングシステムはOnLiveやGaikaiといった商用サービスから始まったが、それらのクローズドシステムではゲームプレイ体験や可用性、スケーラビリティといった要素のテストベッドとして活用することは困難である。Huangら\cite{gaminganywhere}は、研究開発に利用できる高い拡張性、移植性を備えたオープンソースのクラウドゲーミングプラットフォームであるGamingAnywhereを開発した。GamingAnywhereは以下の3つの設計目標に沿って設計されている。
+\begin{itemize}
+    \item オープンソースのシステムであり、ビデオストリーミングなどのコンポーネントを、異なるアルゴリズムや規格、プロコトルで実装した別のコンポーネントに容易に置き換えが可能である
+    \item クロスプラットフォームであり、Windows、Linux、OS Xで利用可能である
+    \item メモリコピー回数を減らす等の時間的/空間的なオーバーヘッドを最小化し、効率的に動作する
+\end{itemize}
+GamingAnywhereはこれらの実験を通して実装された。大規模な実験を通して商用クラウドゲーミングシステムであるOnLiveとStreamMyGameを大幅に凌駕することが示された。GamingAnywhereと比較すると、OnLiveとStreamMyGameは内部における処理遅延が最大で3倍および10倍になり、またビデオ品質についてはそれぞれ3dbおよび19db低くなるという結果が示されている。また、GamingAnywhereはクラウドゲーム開発者やシステム研究者に公開され、クラウドゲーミングシステムのテストベッドとして使用することができる。
 
-GamingAnywhere: An Open Cloud Gaming System
-Huangら\cite{gaminganywhere}は、
 
 
 Placing Virtual Machines to Optimize
@@ -16,4 +22,3 @@ High-Performance Task Distribution for Volunteer Computing
 Andersonら\cite{boinc}は、
 
 
-(EdgeVPN(TinCan)の話は実装の章で)

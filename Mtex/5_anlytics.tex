@@ -55,6 +55,27 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
 
 実験はGamingAnywhereサーバの設定でフレームレートを60fpsに設定した状態で行った。ゲームのジャンルにより画面の動きが激しく、フレームレートの変動の影響が大きいものとそうでないものがあるため、複数のジャンルから選んだゲームを実験に使用した。実験に使用したゲームはMMORPGに分類されるAlbion Online\cite{albiononline}、FPS/アクションに分類されるRed Eclipse 2\cite{redeclipse}、およびボードゲームであるSimply Chess\cite{simplychess}の3種類である。いずれもPCゲームのダウンロード販売等を行うプラットフォームであるSteam\cite{steam}で公開されている、Linuxに対応したゲームである。
 
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_mmo.pdf}
+    \caption{提案システムを使用したAlbion Online (MMORPG)のプレイの様子}
+    \label{fig:screen_mmo}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_fps.pdf}
+    \caption{提案システムを使用したRed Ecliplse 2 (FPS, Action)のプレイの様子}
+    \label{fig:screen_fps}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_board.pdf}
+    \caption{提案システムを使用したSimply Chess (ボードゲーム)のプレイの様子}
+    \label{fig:screen_board}
+\end{figure*}
+
 GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯域制限を施し、EdgeVPNを利用する場合と直接接続する場合のそれぞれについてフレームレートの変化を観測した。帯域制限は、制限をかけていない1Gbpsおよび100Mbpsと10Mbpsの3つの条件で行った。計測値はGamingAnywhereクライアントが定期的に出力するフレームレートの値を10回分計測し、その平均値を使用している。Albion Onlineをプレイした際の結果を図\ref{fig:fps_mmo}、Red Eclipse 2をプレイした際の結果を図\ref{fig:fps_fps}、Simply Chessをプレイした際の結果を図\ref{fig:fps_board}にそれぞれ示した。
 
 動きのあまり少ないボードゲームのSimply Chessのプレイ中においてはEdgeVPNを利用するかどうかに関わらず、帯域制限下でもほぼ60fpsのフレームレートを保っている。また、常に画面の少なくとも一部に動きが生じるジャンルであるMMORPGのAlbion Onlineのプレイ中においても、帯域制限下で60fpsを大きく下回ることなくパフォーマンスが安定している。さらに、常に画面全体に激しい動きが発生するFPS/アクションに分類されるRed Eclipse 2のプレイ中においても、帯域制限下でフレームレートの低下は確認されなかった。
