@@ -30,9 +30,9 @@ siciliaとfirenzeの間のネットワーク遅延の大小によって、Gaming
 \end{figure*}
 
 \subsubsection{リンクに対する遅延の大小のスループットへの影響}
-siciliaとfirenzeの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合の帯域減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
+siciliaとfirenzeの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合のスループット減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
 
-EdgeVPNを利用する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。(これは許容量であるみたいなことを関連研究のとこ書いてから書く)
+EdgeVPNを利用する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。
 
 \begin{figure*}[t]
     \centering
@@ -46,6 +46,32 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/bandwidth_withoutEdgeVPN.pdf}
     \caption{EdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
     \label{fig:band_without_edge}
+\end{figure*}
+
+\subsubsection{10GbpsネットワークにおけるEdgeVPNのオーバーヘッド}
+ネットワークインターフェースが1Gbpsの環境では、スループットの上限が1Gbpsに制限されているので、挿入遅延が0msの場合にEdgeVPNのオーバーヘッドの影響が分かりづらい (図\ref{fig:band_with_edge}、\ref{fig:band_without_edge}) 。この結果はEdgeVPNによる性能低下を正確に測定できていない可能性がある。
+
+そこで、仮想環境にはなるが10Gbpsネットワークが利用可能な環境における実験を行った。異なる物理マシンで動作する10Gbpsで接続された2つのVMを用意し、EdgeVPNでリンクを張るインターフェースと直接接続をするインターフェースをそれぞれ用意した。5.2.2節と同様に遅延挿入を行ってスループット減少の様子を観測した。EdgeVPNを利用する通信についての結果は図\ref{fig:band_withedge_vm}、直接接続する通信についての結果は図\ref{fig:band_withoutedge_vm}である。10GbpsネットワークにおいてはEdgeVPNを利用すると、遅延挿入を行っていなくても550Mbps程度までスループットが下がっていることがわかる。この値が1Gbpsネットワークでの結果よりも低いのは、VMのオーバヘッドによるものと考えられる。また、遅延挿入に伴ってばらつきはあるもののスループットの減少が見られ、60msのネットワーク遅延がある状態では最低で35Mbps程度まで低下している。オーバーヘッドは大きいものの、10Gbps環境においてもクラウドゲーミングのプレイに耐える程度の性能を発揮していると言える。
+
+%\begin{figure*}[t]
+%    \centering
+%    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/ratency_vm.eps}
+%    \caption{10GbpsネットワークにおけるEdgeVPNリンクに対する遅延挿入の影響}
+%   \label{fig:ratency_vm}
+%\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/band_withedge_vm.eps}
+    \caption{10GbpsネットワークにおけるEdgeVPNリンクへの遅延挿入の帯域への影響}
+    \label{fig:band_withedge_vm}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/band_withoutedge_vm.eps}
+    \caption{10GbpsネットワークにおけるEdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
+    \label{fig:band_withoutedge_vm}
 \end{figure*}
 
 \subsection{ゲームプレイ時のフレームレート}
