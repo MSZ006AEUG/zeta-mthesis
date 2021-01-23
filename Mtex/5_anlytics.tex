@@ -45,7 +45,7 @@ EdgeVPNを利用しない条件で行う測定については、物理的なネ�
 \end{lstlisting}
 
 \subsubsection{リンクに対する遅延の大小のスループットへの影響}
-プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合のスループット減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
+プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合のスループット減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。その際クライアント側でコマンド\ref{measure_band}のようにした。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
 
 EdgeVPNを利用する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。
 
@@ -62,6 +62,10 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
     \caption{EdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
     \label{fig:band_without_edge}
 \end{figure*}
+
+\begin{lstlisting}[caption=帯域計測,label=measure_band]
+    i=1; while [ $i -le 10 ]; do iperf -c 10.10.100.2 -t 60; i=$(expr $i + 1);done
+\end{lstlisting}
 
 \subsubsection{10GbpsネットワークにおけるEdgeVPNのオーバーヘッド}
 ネットワークインターフェースが1Gbpsの環境では、スループットの上限が1Gbpsに制限されているので、挿入遅延が0msの場合にEdgeVPNのオーバーヘッドの影響が分かりづらい (図\ref{fig:band_with_edge}、\ref{fig:band_without_edge}) 。この結果はEdgeVPNによる性能低下を正確に測定できていない可能性がある。
@@ -117,7 +121,11 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
     \label{fig:screen_board}
 \end{figure*}
 
-GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯域制限を施し、EdgeVPNを利用する場合と直接接続する場合のそれぞれについてフレームレートの変化を観測した。帯域制限は、制限をかけていない1Gbpsおよび100Mbpsと10Mbpsの3つの条件で行った。計測値はGamingAnywhereクライアントが定期的に出力するフレームレートの値を10回分計測し、その平均値を使用している。Albion Onlineをプレイした際の結果を図\ref{fig:fps_mmo}、Red Eclipse 2をプレイした際の結果を図\ref{fig:fps_fps}、Simply Chessをプレイした際の結果を図\ref{fig:fps_board}にそれぞれ示した。
+GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯域制限を施し、EdgeVPNを利用する場合と直接接続する場合のそれぞれについてフレームレートの変化を観測した。帯域制限は、制限をかけていない1Gbpsおよび100Mbpsと10Mbpsの3つの条件で行った。コマンド\ref{ristrict_band}のようにした。計測値はGamingAnywhereクライアントが定期的に出力するフレームレートの値を10回分計測し、その平均値を使用している。Albion Onlineをプレイした際の結果を図\ref{fig:fps_mmo}、Red Eclipse 2をプレイした際の結果を図\ref{fig:fps_fps}、Simply Chessをプレイした際の結果を図\ref{fig:fps_board}にそれぞれ示した。
+
+\begin{lstlisting}[caption=帯域制限,label=ristrict_band]
+    tc qdisc add dev brl101000F root tbf limit 10mb buffer 10kb rate 0.375mbps
+\end{lstlisting}
 
 動きのあまり少ないボードゲームのSimply Chessのプレイ中においてはEdgeVPNを利用するかどうかに関わらず、帯域制限下でもほぼ60fpsのフレームレートを保っている。また、常に画面の少なくとも一部に動きが生じるジャンルであるMMORPGのAlbion Onlineのプレイ中においても、帯域制限下で60fpsを大きく下回ることなくパフォーマンスが安定している。さらに、常に画面全体に激しい動きが発生するFPS/アクションに分類されるRed Eclipse 2のプレイ中においても、帯域制限下でフレームレートの低下は確認されなかった。
 
