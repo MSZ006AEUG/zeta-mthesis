@@ -6,17 +6,43 @@
 
 %以下ではそれぞれの課題の解決方法を述べる。
 
-\subsection{VCコントローラとエージェントの連携}
-VCコントローラと遊休コンピュータ上で動作するVCホストエージェントとの通信の課題についてはgRPC\cite{grpc}を用いる。gRPCはGoogleが開発しているオープンソースのRPCフレームワークで、異なるコンピュータ間情報をやり取りするために使用される。gRPCではクライアントアプリケーションがローカルで実装されたメソッドを使用するかのようにサーバアプリケーションのメソッドを直接呼び出すことができるため、分散アプリケーション等の実装に適している(図\ref{fig:grpc})。サーバ側ではサービスを定義してそのインターフェースを実装する。クライアント側ではサーバと同じメソッドを提供するスタブを介してサーバアプリケーションの機能を使えるようにしているのが特徴である。
-
-gRPCのResponse Streaming gRPCという機能は、単一の要求に対して複数のレスポンスを任意のタイミングで返すことが可能である。これを使用することで、VCクライアントが送信した単一のゲームプレイ要求に対して、ACKや起動報告、実行終了時の完了報告、エラーの通知など様々なレスポンスを返すことができる。
-
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/grpc.eps}
     \caption{gRPCの概要}
     \label{fig:grpc}
 \end{figure*}
+
+\subsection{VCコントローラとエージェントの連携}
+VCコントローラと遊休コンピュータ上で動作するVCホストエージェントとの通信の課題についてはgRPC\cite{grpc}を用いる。gRPCはGoogleが開発しているオープンソースのRPCフレームワークで、異なるコンピュータ間情報をやり取りするために使用される。gRPCではクライアントアプリケーションがローカルで実装されたメソッドを使用するかのようにサーバアプリケーションのメソッドを直接呼び出すことができるため、分散アプリケーション等の実装に適している(図\ref{fig:grpc})。サーバ側ではサービスを定義してそのインターフェースを実装する。クライアント側ではサーバと同じメソッドを提供するスタブを介してサーバアプリケーションの機能を使えるようにしているのが特徴である。
+
+gRPCのResponse Streaming gRPCという機能は、単一の要求に対して複数のレスポンスを任意のタイミングで返すことが可能である。これを使用することで、VCクライアントが送信した単一のゲームプレイ要求に対して、ACKや起動報告、実行終了時の完了報告、エラーの通知など様々なレスポンスを返すことができる。
+
+gRPCはgRPCサーバとgRPCスタブのやりとりを行うためにprotoファイルにインターフェースを定義する必要がある。やりとりされるデータ構造はmessageとして指定し、コンパイラによってデータアクセスクラスが生成される。また、gRPCサーバが提供するサービスもproto上に定義し、入力と戻り値をmessageとして指定する。定義したprotoファイルをListing\ref{proto}に示す。実装したgRPCのAPIの動作は以下である。
+
+\begin{enumerate}
+    \item gRPCスタブがAwakeningサービスを使用してAwakeRequestを送信する
+    \item gRPCサーバがAwakeRequestを受け取るとGamingAnywhereサーバを起動し、gRPCスタブにAwakeReplyを返す
+    \item gRPCスタブがAwakeReplyを受け取るとGamingAnywhereクライアントを起動し、GamingAnywhereサーバに接続する
+\end{enumerate}
+
+\begin{lstlisting}[caption=protoファイル,label=proto]
+    syntax = "proto3";
+
+    package signal;
+
+    service Signal{
+        rpc Awakening (AwakeRequest) returns (AwakeReply) {}
+    }
+
+    message AwakeRequest {
+        string name = 1;
+    }
+
+    message AwakeReply {
+        string message = 1;
+    }
+\end{lstlisting}
 
 \subsection{クラウドゲームサーバ/クライアント間のP2P通信}
 実際にリモートでのゲームプレイを実現するクラウドゲームサーバとクラウドゲームクライアントにはGamingAnywhereを使用する。遊休コンピュータ上にGamingAnywhereサーバ、プレイヤーPC上にGamingAnywhereクライアントを起動し、GamingAnywhereサーバが展開するRTSPサーバにクライアントが接続することでクラウドゲームのプレイが開始される。

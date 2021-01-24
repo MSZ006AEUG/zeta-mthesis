@@ -43,7 +43,7 @@ EdgeVPNを利用しない条件で行う測定については、物理的なネ�
 \subsection{クラウドゲームサーバ/クライアント間の通信性能}
 
 \subsubsection{リンクに対する遅延の大小の影響}
-プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小によって、GamingAnywhereサーバ/クライアント間のリンクを張るために使用しているEdgeVPNのオーバーヘッドがリンクの遅延に与える影響について調査した。tc\cite{iproute2}を用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合の遅延増加の様子ping\cite{ping}を用いて計測した。遅延を挿入する際にコマンド\ref{add_ratency}のようにした。計測遅延と挿入遅延の値の差をプロットしたものが図\ref{fig:ratency}である。計測値にはpingを10回実行した際の値の平均値を使用している。
+プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小によって、GamingAnywhereサーバ/クライアント間のリンクを張るために使用しているEdgeVPNのオーバーヘッドがリンクの遅延に与える影響について調査した。tc\cite{iproute2}を用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合の遅延増加の様子ping\cite{ping}を用いて計測した。遅延を挿入する際にListing\ref{add_ratency}のようにした。計測遅延と挿入遅延の値の差をプロットしたものが図\ref{fig:ratency}である。計測値にはpingを10回実行した際の値の平均値を使用している。
 
 直接通信に比べて、EdgeVPNを利用する場合は平均して1ms程度遅延のオーバヘッドが存在することがわかる。また、遅延のオーバーヘッドは挿入遅延の大きさに関わらずほぼ一定であるといえる。
 
@@ -59,7 +59,7 @@ EdgeVPNを利用しない条件で行う測定については、物理的なネ�
 \end{lstlisting}
 
 \subsubsection{リンクに対する遅延の大小のスループットへの影響}
-プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合のスループット減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。その際クライアント側でコマンド\ref{measure_band}のようにした。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
+プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小の影響で、GamingAnywhereサーバ/クライアント間のリンクで展開したEdgeVPNがリンクのネットワークスループットに与える影響について調査した。5.2.1と同様にtcを用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合のスループット減少の様子をiperf\cite{iperf}を使用して計測した。計測値はiperfを60秒間の設定で10回実行した結果を用いている。その際クライアント側でListing\ref{measure_band}のようにした。EdgeVPNを利用する通信についての結果をプロットしたものが図\ref{fig:band_with_edge}、直接接続する通信についての結果をプロットしたものが図\ref{fig:band_without_edge}である。
 
 EdgeVPNを利用する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。
 
@@ -135,7 +135,7 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
     \label{fig:screen_board}
 \end{figure*}
 
-GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯域制限を施し、EdgeVPNを利用する場合と直接接続する場合のそれぞれについてフレームレートの変化を観測した。帯域制限は、制限をかけていない1Gbpsおよび100Mbpsと10Mbpsの3つの条件で行った。コマンド\ref{ristrict_band}のようにした。計測値はGamingAnywhereクライアントが定期的に出力するフレームレートの値を10回分計測し、その平均値を使用している。Albion Onlineをプレイした際の結果を図\ref{fig:fps_mmo}、Red Eclipse 2をプレイした際の結果を図\ref{fig:fps_fps}、Simply Chessをプレイした際の結果を図\ref{fig:fps_board}にそれぞれ示した。
+GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯域制限を施し、EdgeVPNを利用する場合と直接接続する場合のそれぞれについてフレームレートの変化を観測した。帯域制限は、制限をかけていない1Gbpsおよび100Mbpsと10Mbpsの3つの条件で行った。Listing\ref{ristrict_band}のようにした。計測値はGamingAnywhereクライアントが定期的に出力するフレームレートの値を10回分計測し、その平均値を使用している。Albion Onlineをプレイした際の結果を図\ref{fig:fps_mmo}、Red Eclipse 2をプレイした際の結果を図\ref{fig:fps_fps}、Simply Chessをプレイした際の結果を図\ref{fig:fps_board}にそれぞれ示した。
 
 \begin{lstlisting}[caption=帯域制限,label=ristrict_band]
     tc qdisc add dev brl101000F root tbf limit 10mb buffer 10kb rate 0.375mbps
