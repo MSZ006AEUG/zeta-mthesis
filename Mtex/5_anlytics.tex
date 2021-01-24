@@ -10,30 +10,30 @@
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/experimentalenvironment.eps}
+    \includegraphics[width=\textwidth,keepaspectratio,clip]{img/experimentalenvironment.eps}
     \caption{評価環境}
     \label{fig:expenv}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth,keepaspectratio,clip]{img/nic.eps}
+    \caption{評価環境における通信}
+    \label{fig:nic}
 \end{figure*}
 
 プレイヤーPCと遊休コンピュータはそれぞれUbuntu20.04で動作するマシンを用い、1Gbpsのリンクを持つネットワークで接続した。それぞれのマシンに2つのネットワークインターフェースを用意した。一つは管理用に使用し、もう一方はクラウドゲーミングのゲームデータの通信に使用している。ゲームデータ通信用のインターフェースに遅延の挿入や帯域制限をかけることにより、様々な環境のネットワークを再現して評価を行う。図\ref{fig:nic}のように、EdgeVPNを起動するとdockerコンテナが立ち上がり、それによってゲームデータ通信用のインターフェース上に仮想ネットワークインターフェースが立ち上がる。そこに仮想的なIPアドレスが割り当てられ、この仮想アドレスを持つインターフェースのペアでEdgeVPNのリンクが確立する。
 
 EdgeVPNを利用しない条件で行う測定については、物理的なネットワークインターフェースに割り当てられているIPアドレスを用いてクラウドゲームサーバ/クライアントの接続を行い、直接通信をさせる。EdgeVPNを利用する条件での測定は、EdgeVPNによって生成された仮想ネットワークインターフェースに割り当てられている仮想IPアドレスを用いて通信を行うことで、VPN上における性能を測定する。
 
-\begin{figure*}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/nic.eps}
-    \caption{評価環境における通信}
-    \label{fig:nic}
-\end{figure*}
-
 \subsection{クラウドゲームサーバ/クライアント間の通信性能}
 
-\subsubsection{リンクに対する生の遅延の大小の影響}
+\subsubsection{リンクに対する遅延の大小の影響}
 プレイヤーPCと遊休コンピュータの間のネットワーク遅延の大小によって、GamingAnywhereサーバ/クライアント間のリンクを張るために使用しているEdgeVPNのオーバーヘッドがリンクの遅延に与える影響について調査した。tc\cite{iproute2}を用いてリンクに0-60msの遅延を挿入し、EdgeVPNを利用する場合と直接接続する場合の遅延増加の様子ping\cite{ping}を用いて計測した。遅延を挿入する際にコマンド\ref{add_ratency}のようにした。計測遅延と挿入遅延の値の差をプロットしたものが図\ref{fig:ratency}である。計測値にはpingを10回実行した際の値の平均値を使用している。
 
 直接通信に比べて、EdgeVPNを利用する場合は平均して1ms程度遅延のオーバヘッドが存在することがわかる。また、遅延のオーバーヘッドは挿入遅延の大きさに関わらずほぼ一定であるといえる。
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/graph_ratency.pdf}
     \caption{EdgeVPNリンクに対する遅延挿入の影響}
@@ -49,14 +49,14 @@ EdgeVPNを利用しない条件で行う測定については、物理的なネ�
 
 EdgeVPNを利用する通信において、スループットが指数関数的に減少していることがわかる。一方で、最も大きい60msまで遅延が増大した状況下においても40Mbps程度のスループットをGamingAnywhereサーバ/クライアント間のリンクにおいて維持できている。
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/bandwidth_withEdgeVPN.pdf}
     \caption{EdgeVPNリンクへの遅延挿入の帯域への影響}
     \label{fig:band_with_edge}
 \end{figure*}
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/bandwidth_withoutEdgeVPN.pdf}
     \caption{EdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
@@ -79,14 +79,14 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
 %   \label{fig:ratency_vm}
 %\end{figure*}
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/band_withedge_vm.eps}
     \caption{10GbpsネットワークにおけるEdgeVPNリンクへの遅延挿入の帯域への影響}
     \label{fig:band_withedge_vm}
 \end{figure*}
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/band_withoutedge_vm.eps}
     \caption{10GbpsネットワークにおけるEdgeVPNを使用していないリンクへの遅延挿入の帯域への影響}
@@ -102,21 +102,21 @@ EdgeVPNを利用する通信において、スループットが指数関数的�
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_mmo.pdf}
+    \includegraphics[width=\textwidth,keepaspectratio,clip]{img/screen_mmo.pdf}
     \caption{提案システムを使用したAlbion Online (MMORPG)のプレイの様子}
     \label{fig:screen_mmo}
 \end{figure*}
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_fps.pdf}
+    \includegraphics[width=\textwidth,keepaspectratio,clip]{img/screen_fps.pdf}
     \caption{提案システムを使用したRed Ecliplse 2 (FPS, Action)のプレイの様子}
     \label{fig:screen_fps}
 \end{figure*}
 
 \begin{figure*}[t]
     \centering
-    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/screen_board.pdf}
+    \includegraphics[width=\textwidth,keepaspectratio,clip]{img/screen_board.pdf}
     \caption{提案システムを使用したSimply Chess (ボードゲーム)のプレイの様子}
     \label{fig:screen_board}
 \end{figure*}
@@ -129,21 +129,21 @@ GamingAnywhereサーバ/クライアント間のリンクにtcを使用して帯
 
 動きのあまり少ないボードゲームのSimply Chessのプレイ中においてはEdgeVPNを利用するかどうかに関わらず、帯域制限下でもほぼ60fpsのフレームレートを保っている。また、常に画面の少なくとも一部に動きが生じるジャンルであるMMORPGのAlbion Onlineのプレイ中においても、帯域制限下で60fpsを大きく下回ることなくパフォーマンスが安定している。さらに、常に画面全体に激しい動きが発生するFPS/アクションに分類されるRed Eclipse 2のプレイ中においても、帯域制限下でフレームレートの低下は確認されなかった。
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/framerate_MMO.pdf}
     \caption{帯域制限下でのゲームプレイ時のフレームレートの変化 (Albion Online (MMORPG)プレイ時)}
     \label{fig:fps_mmo}
 \end{figure*}
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/framerate_FPS.pdf}
     \caption{帯域制限下でのゲームプレイ時のフレームレートの変化 (Red Ecliplse 2 (FPS, Action)プレイ時)}
     \label{fig:fps_fps}
 \end{figure*}
 
-\begin{figure*}[t]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/framerate_Board.pdf}
     \caption{帯域制限下でのゲームプレイ時のフレームレートの変化 (Simply Chess (ボードゲーム)プレイ時)}
