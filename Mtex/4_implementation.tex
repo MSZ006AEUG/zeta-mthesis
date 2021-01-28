@@ -59,11 +59,20 @@ EdgeVPNはIP-over-P2P(IPOP)プロジェクト\cite{ipop}の進化版である。
 
 EdgeVPNはピア間でカプセル化/暗号化されたイーサネットフレームを伝送する仮想リンクの構築に、Justeら\cite{tincan}が開発したTinCanを使用している。TinCanは図\ref{fig:tincan}のように、XMPPサーバを使用してエンドツーエンドのVPNトンネルを配備することにより、コントローラとデータパスを分離するモデルを実現している。また、ノードが接続先に自身のパブリックIPやポートを知らせるためのリフレクションサービスとしてSTUNプロトコル\cite{stun}を使用する。一方、制限の強いファイアウォールやSymmetric NATの背後にあり直接P2P接続を構築できないノードがある場合はリレーサービスとしてTURNプロトコル\cite{turn}を実行するサーバによりトラフィックをプロキシしている。
 
+EdgeVPNのオーバレイネットワークはネットワークトポロジをSymphonyプロトコル\cite{symphony}を基に構築している。Symphonyプロトコルは、図\ref{fig:overlay}のようにネットワークに参加する全ノードに一意の識別子を割り当て、その識別子によって順序付けられたリング構造でネットワークを構成する。このリングに沿ってパケットを転送することで、あるノードと他の任意のノードとの間で通信が可能になる。しかし、単純なリングではスケールしないため、リングを横切る長距離リンクを追加してパス長を短くする。これによりSymphonyプロトコルはO(log(N))ステップでパケットを転送可能である。EdgeVPNは更に、トラフィックの多いノード間には図\ref{fig:overlay}のノードID1とノードID3間のリンクのようなオンデマンドリンクを自動で追加して転送を効率化する機能を備えている。
+
 \begin{figure*}[t]
     \centering
     \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/tincan.eps}
     \caption{TinCanのシステム概要}
     \label{fig:tincan}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth,keepaspectratio,clip]{img/overlay_topology.eps}
+    \caption{オーバレイトポロジ}
+    \label{fig:overlay}
 \end{figure*}
 
 \subsection{システム動作}
